@@ -298,12 +298,12 @@ public class JavaBank extends JFrame {
        
     	
         	if ((noAccounts <= 9) & (Name != "") & (Accountnum != 0))  {        		
-        		myAccounts[noAccounts] = new Account(Name,Accountnum,Balance);        		
+        		myAccounts[noAccounts] = new Account(Name,Accountnum,Balance, null);        		
         		AccountNames[noAccounts] = "USED";        		
         		//System.out.println(myAccounts[noAccounts].getaccountname());
         		//emptyAccount = i;         		
         		
-        		displayJTextArea.setText(myAccounts[noAccounts].getaccountname() + " " + myAccounts[noAccounts].getaccountnum() + " " + myAccounts[noAccounts].getbalance());
+        		displayJTextArea.setText(myAccounts[noAccounts].getAccountname() + " " + myAccounts[noAccounts].getAccountname() + " " + myAccounts[noAccounts].getBalance());
         		noAccounts ++;
         		System.out.println(noAccounts);        		
         	}
@@ -361,14 +361,14 @@ public class JavaBank extends JFrame {
         
              
             for (int i=0; i<noAccounts; i++) {
-        	if ((myAccounts[i].getaccountnum() == Accountnum) && (Deposit>0)) {
-        		    myAccounts[i].setbalance(myAccounts[i].getbalance()+Deposit);
-        		    displayJTextArea.setText(myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " " + myAccounts[i].getbalance());
+        	if ((myAccounts[i].getAccountname() == Accountnum) && (Deposit>0)) {
+        		    myAccounts[i].setbalance(myAccounts[i].getBalance()+Deposit);
+        		    displayJTextArea.setText(myAccounts[i].getAccountname() + " " + myAccounts[i].getAccountname() + " " + myAccounts[i].getBalance());
         	}
         		
-        	if ((myAccounts[i].getaccountnum() == Accountnum) && (Withdraw>0)) {        		
-        			 myAccounts[i].setbalance(myAccounts[i].getbalance()-Withdraw);
-        			 displayJTextArea.setText(myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " " + myAccounts[i].getbalance());
+        	if ((myAccounts[i].getAccountname() == Accountnum) && (Withdraw>0)) {        		
+        			 myAccounts[i].setbalance(myAccounts[i].getBalance()-Withdraw);
+        			 displayJTextArea.setText(myAccounts[i].getAccountname() + " " + myAccounts[i].getAccountname() + " " + myAccounts[i].getBalance());
         	}
         	
         	        }
@@ -395,7 +395,7 @@ public class JavaBank extends JFrame {
     	}else {
     	for (int i=0; i<noAccounts; i++) { 
     		
-    			displayJTextArea.append(myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " " + myAccounts[i].getbalance() + "\n");
+    			displayJTextArea.append(myAccounts[i].getAccountname() + " " + myAccounts[i].getAccountname() + " " + myAccounts[i].getBalance() + "\n");
          	    
     		
     		

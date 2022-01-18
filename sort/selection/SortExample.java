@@ -11,7 +11,7 @@ public class SortExample {
 		
 	}
 
-	static void selectionSortOracle(int[] numbers ) {
+	public static void selectionSortOracle(int[] numbers ) {
 		int indexMin = 0;
 		for(int i = 0; i < numbers.length; i++) {
 			indexMin = i;
